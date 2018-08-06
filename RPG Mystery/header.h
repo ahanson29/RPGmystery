@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <windows.h>
 #include "Locations.h"
+#include"character.h"
 
 using std::cout;
 using std::cin;
@@ -14,6 +15,8 @@ using std::string;
 struct item
 {
 	string name;
-	std::string description;
+	string description;
 
+	item *pNext;
+	item *pPrev;
 };

@@ -1,24 +1,35 @@
 #pragma once
 #include "header.h"
 
-using std::string;
-
 class Character
 {
 public:
 	Character();
-	Character(std::string newFname, string newLname, int newAage, string sex, string newLocation, string hair, string eye, string pants, string shirt, string height, item items[]);
+	Character(std::string newFname, string newLname, int newAge, string sex, string newLocation, string hair, string eye, string height, item *items);
 	~Character();
 
 	//getters
-	string getName();
-	int getAage();
+	string getFname();
+	string getLname();
+	int getAge();
+	string getSex();
 	string getLocation();
+	string getHair_c();
+	string getEye_c();
+	string getHeight();
+	string printItems();
 
 	//setters
-	void setName();
+	void setFname();
+	void setLname();
+	void setSex();
 	void setAge();
 	void setLocation();
+	void setHair_c();
+	void setEye_c();
+	void setHeight();
+
+	void addItem();
 
 private:
 	string f_name;
@@ -28,9 +39,7 @@ private:
 	string location;
 	string hair_c;
 	string eye_c;
-	string pants;
-	string shirt;
 	string height;
-	item i[];
+	item *i;
 
 };
