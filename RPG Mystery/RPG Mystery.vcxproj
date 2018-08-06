@@ -110,10 +110,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="character.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="Locations.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="character.cpp" />
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="Locations.cpp" />
     <ClCompile Include="main.cpp" />

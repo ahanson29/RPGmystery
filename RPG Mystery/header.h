@@ -10,3 +10,10 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+
+struct item
+{
+	string name;
+	std::string description;
+
+};
