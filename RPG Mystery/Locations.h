@@ -1,4 +1,7 @@
 #pragma once
+#ifndef LOCATIONS_H
+#define LOCATIONS_H
+
 #include "header.h"
 
 class Location
@@ -48,3 +51,5 @@ private:
 
 Location & move_location(int &x, Location &location);
 void initialize_map(Location map[]);
+
+#endif

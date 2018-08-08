@@ -5,18 +5,14 @@ Character::Character()
 	this->f_name = "*first name*";
 	this->l_name = "*last name*";
 	this->age = 0;
-	this->sex = "*sex here*";
+	this->sex = '*';
 	this->location = "*no where*";
 	this->hair_c = "*hair color*";
 	this->eye_c = "*eye color*";
 	this->height = "*height*";
-	this->i[0].name = "*item name*";
-	this->i[0].description = "*item description*";
-	this->i[0].pNext = nullptr;
-	this->i[0].pPrev = nullptr;
 }
 
-Character::Character(string newFname, string newLname, int newAge, string sex, string newLocation, string hair, string eye, string height, item items[])
+Character::Character(string newFname, string newLname, int newAge, char sex, string newLocation, string hair, string eye, string height)
 {
 	this->f_name = newFname;
 	this->l_name = newLname;
@@ -26,7 +22,6 @@ Character::Character(string newFname, string newLname, int newAge, string sex, s
 	this->hair_c = hair;
 	this->eye_c = eye;
 	this->height = height;
-	this->i = items;
 }
 
 Character::Character::~Character()
@@ -37,76 +32,71 @@ Character::Character::~Character()
 //getters
 string Character::getFname()
 {
-
+	return this->f_name;
 }
 string Character::getLname()
 {
-
+	return this->l_name;
 }
 int Character::getAge()
 {
-
+	return this->age;
 }
-string Character::getSex()
+char Character::getSex()
 {
-
+	return this->sex;
 }
 string Character::getLocation()
 {
-
+	return this->location;
 }
 string Character::getHair_c()
 {
-
+	return this->hair_c;
 }
 string Character::getEye_c()
 {
-
+	return this->eye_c;
 }
 string Character::getHeight()
 {
-
+	return this->height;
 }
-string Character::printItems()
+void Character::printItems()
 {
 
 }
 
 //setters
-void Character::setFname()
+void Character::setFname(string name)
 {
-
+	this->f_name = name;
 }
-void Character::setLname()
+void Character::setLname(string name)
 {
-
+	this->l_name = name;
 }
-void Character::setSex()
+void Character::setSex(char sex)
 {
-
+	this->sex = sex;
 }
-void Character::setAge()
+void Character::setAge(int age)
 {
-
+	this->age = age;
 }
-void Character::setLocation()
+void Character::setLocation(string location)
 {
-
+	this->location = location;
 }
-void Character::setHair_c() 
+void Character::setHair_c(string hair) 
 {
-
+	this->hair_c = hair;
 }
-void Character::setEye_c() 
+void Character::setEye_c(string eye) 
 {
-
+	this->eye_c = eye;
 }
-void Character::setHeight()
+void Character::setHeight(string height)
 {
-
-}
-
-void Character::addItem()
-{
-
+	this->height = height;
 }
