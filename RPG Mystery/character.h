@@ -25,9 +25,11 @@ public:
 	int getAge();
 	char getSex();
 	std::string getLocation();
+	std::string getJob();
 	std::string getHair_c();
 	std::string getEye_c();
 	std::string getHeight();
+	std::string getBodyType();
 	void printItems();
 
 	//setters
@@ -36,9 +38,11 @@ public:
 	void setSex(char sex);
 	void setAge(int age);
 	void setLocation(std::string location);
+	void setJob(std::string job);
 	void setHair_c(std::string hair);
 	void setEye_c(std::string eye);
 	void setHeight(std::string height);
+	void setBodyType(std::string bodyType);
 
 	//void addItem();
 
@@ -48,11 +52,15 @@ private:
 	char sex;
 	int age;
 	std::string location;
+	std::string job;
 	std::string hair_c;
 	std::string eye_c;
 	std::string height;
+	std::string bodyType;
 	std::list<item> i;
 
 };
+
+void initialize_characters(Character list[]);
 
 #endif

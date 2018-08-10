@@ -5,12 +5,14 @@ Location &move_location(int &x, Location &location)
 	Location *pLocation;
 	pLocation = &location;
 
+
 		system("cls");
 		cout << "Location: " << pLocation->getName() << endl;
 		cout << endl;
 		cout << pLocation->getDescription() << endl;
 		cout << endl;
 		pLocation->printList();
+
 		cin >> x;
 
 		switch (x)
@@ -181,15 +183,15 @@ void initialize_map(Location map[])
 	map[22].setpL4(&map[25]);
 	map[22].setpL5(&map[26]);
 	map[22].setpL6(&map[4]);
-	map[22].setList("1. Go to the Beach\n2. Go to the Shop\n3. Go to Ultimate Park\n4.Go to the High School\n5.Go to the Stadium\n6.Go to Creviston Street\n");
+	map[22].setList("1. Go to the Beach\n2. Go to the Shop\n3. Go to the church\n4.Go to the High School\n5.Go to the Stadium\n6.Go to Creviston Street\n");
 
 	map[23].setName("The Other Shop");
 	map[23].setDescription("You are at the Other Shop in town.");
 	map[23].setpL1(&map[22]);
 	map[23].setList("1. Go to Merigold Street\n");
 
-	map[24].setName("Ultimate Park");
-	map[24].setDescription("You are at Ultimate Park.");
+	map[24].setName("Church");
+	map[24].setDescription("You are in the local church.");
 	map[24].setpL1(&map[22]);
 	map[24].setList("1. Go to Merigold Street\n");
 

@@ -3,6 +3,7 @@
 #define HEADER_RPG
 
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
 #include <string>
 #include <stdio.h>
@@ -17,6 +18,7 @@ using std::cin;
 using std::endl;
 using std::string;
 using std::list;
+using std::ifstream;
 
 
 #endif
