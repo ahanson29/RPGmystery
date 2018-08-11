@@ -10,8 +10,9 @@
 #include <windows.h>
 #include <list>
 #include <iterator>
+#include <vector>
 #include "Locations.h"
-#include"character.h"
+#include "character.h"
 
 using std::cout;
 using std::cin;
@@ -19,6 +20,8 @@ using std::endl;
 using std::string;
 using std::list;
 using std::ifstream;
+using std::vector;
+
 
 
 #endif

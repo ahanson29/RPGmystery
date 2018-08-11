@@ -1,7 +1,8 @@
 #include "header.h"
 
-Location &move_location(int &x, Location &location)
+Location &move_location(int &x, Location &location, Character char_list[])
 {
+	int option = 1;
 	Location *pLocation;
 	pLocation = &location;
 
@@ -11,7 +12,89 @@ Location &move_location(int &x, Location &location)
 		cout << endl;
 		cout << pLocation->getDescription() << endl;
 		cout << endl;
-		pLocation->printList();
+
+		if (pLocation->char_loc(char_list))
+		{
+			cout << endl;
+			if (pLocation->getpL1() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL1()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL2() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL2()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL3() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL3()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL4() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL4()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL5() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL5()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL6() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL6()->getName() << endl;
+				option++;
+			}
+
+			int occ = 0;
+
+			while (occ < location.getOccupants())
+			{
+				cout << option << ". Talk to " << pLocation->getInRoom(occ) << endl;
+				occ++;
+				option++;
+			}
+
+		}
+		else
+		{
+			cout << endl;
+			if (pLocation->getpL1() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL1()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL2() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL2()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL3() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL3()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL4() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL4()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL5() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL5()->getName() << endl;
+				option++;
+			}
+			if (pLocation->getpL6() != nullptr)
+			{
+				cout << option << ". Go to " << pLocation->getpL6()->getName() << endl;
+				option++;
+			}
+		}
+			
+
+	//	pLocation->printList();
+
 
 		cin >> x;
 

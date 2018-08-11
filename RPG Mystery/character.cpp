@@ -1,4 +1,5 @@
 #include "character.h"
+#include "Locations.h"
 
 Character::Character()
 {

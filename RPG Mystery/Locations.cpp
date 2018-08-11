@@ -67,6 +67,14 @@ Location * Location::getpL6()
 {
 	return this->pL6;
 }
+string Location::getInRoom(int index)
+{
+	return this->in_room[index];
+}
+int Location::getOccupants()
+{
+	return this->occupants;
+}
 
 //setters
 void Location::setName(string newName)
@@ -113,4 +121,29 @@ void Location::printList()
 {
 	int x = -1;
 	cout << this->list;
+}
+void Location::setOccupants(int num)
+{
+	this->occupants = num;
+}
+
+bool Location::char_loc(Character c[])
+{
+	bool flag = false;
+	int j = 0;
+	this->occupants = 0;
+
+	for (int i = 0; i < 25; i++)
+	{
+		if (this->name == c[i].getLocation())
+		{
+			cout << c[i].getFname() << " " << c[i].getLname() << " is here." << endl;
+			this->in_room[j] = c[i].getFname();
+			flag = true;
+			this->occupants++;
+			j++;
+		}
+	}
+
+	return flag;
 }
